@@ -10,12 +10,16 @@
 </head>
 <body>
     <header>
+        <!-- burger menu -->
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
         </label>
+        <!-- Logo -->
         <div class="logo"><img src="images\logo.svg" alt="logo"></div>
-        <nav><ul>
+        <!-- Nav -->
+        <nav>
+            <ul>
             <li>Collections</li>
             <li>Men</li>
             <li>Women</li>
@@ -24,14 +28,72 @@
         </ul></nav>
 <!-- cart and avatar outer-container -->
       <div class="user-outer-container">
-          <!-- Cart and Avatar -->
+          <!-- Cart and Avatar to activate the cart div -->
           <div class="user-info">
               <img src="images\icon-cart.svg" alt="cart">
               <img class="avatar" src="images\image-avatar.png" alt="avatar">
           </div>
       </div>
+      <!-- Cart div with products and total currently hidden and will appear when cart image is pressed -->
       <div class="cart"></div>
     </header>
+
+    <!-- Featured Product Section -->
+<!-- Outer Container to set the max width on for larger screens -->
+    <div class="outer-container">
+        <!-- Inner container which will have a display:flex; to create the image section and the content section -->
+        <div class="Product-flex-container">
+            <!-- Image section -->
+            <div class="product-images">
+                <!-- Large image -->
+                <div class="featured-product">
+                    <img class="nav previous" src="images\icon-previous.svg" alt="icon-previous">
+                    <img class="nav next" src="images\icon-next.svg" alt="icon-next">
+                    <img src="images\image-product-1.jpg" alt="image-product-1">
+                </div>
+                <!-- smaller images -->
+                <div class="images-container">
+                    <img src="images\image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+                    <img src="images\image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
+                    <img src="images\image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
+                    <img src="images\image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
+                </div>
+            </div>
+            <!-- content section -->
+            <div class="product-content">
+                <div class="content-container">
+                <h3>SNEAKER COMPANY</h3>
+                <h1>Fall Limited Edition Sneakers</h1>
+                <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather</p>
+                <!-- Contains Price and discount amount -->
+                <div class="price-flex-container">
+                    <div class="price"><h2>$125.00</h2></div>
+                    <div class="discount">
+                        <div class="discount-value"><p>50%</p></div>
+                    </div>
+                    <div class="reduced-price"><p>$250.00</p></div>
+                </div>
+                <!-- Quantity and add to cart outer container -->
+                <div class="add-to-cart-container">
+                    <div class="quantity-container">
+                        <div class="quantity">
+                            <img src="images\icon-minus.svg" alt="icon-minus">
+                            <p>0</p>
+                            <img src="images\icon-plus.svg" alt="icon-plus">
+                        </div>
+                    </div>
+                    <div class="add-to-cart">
+                        <div class="cart-container">
+                            <img src="images\icon-cart.svg" alt="icon-cart">
+                            <p>Add To Cart</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
   
     <script src="app.js"></script>
 </body>

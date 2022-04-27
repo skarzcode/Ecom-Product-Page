@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template</title>
   
 </head>
@@ -38,6 +38,31 @@
       <div class="cart"></div>
     </header>
 
+    <!-- Lightbox/Image Carosel to be displayed when user clicks featured image -->
+    <div class="modal">
+        <div class="product-images">
+            <!-- Large image -->
+            <div class="featured-product">
+                <div class="previous-container pre2 navigation2">
+                    <img class="nav" src="images\icon-previous.svg" alt="icon-previous">   
+                </div>
+
+                <div class="next-container next2 navigation2">
+                    <img class="nav" src="images\icon-next.svg" alt="icon-next"> 
+                </div>
+                
+                <img src="images\image-product-1.jpg" alt="image-product-1">
+            </div>
+            <!-- smaller images -->
+            <div class="images-container">
+                <img src="images\image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+                <img src="images\image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
+                <img src="images\image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
+                <img src="images\image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
+            </div>
+        </div>
+    </div>
+
     <!-- Featured Product Section -->
 <!-- Outer Container to set the max width on for larger screens -->
     <div class="outer-container">
@@ -48,21 +73,21 @@
                 <!-- Large image -->
                 <div class="featured-product">
                     <div class="previous-container navigation">
-                        <img class="nav" src="images\icon-previous.svg" alt="icon-previous">   
+                        <img class="nav preNavigation" src="images\icon-previous.svg" alt="icon-previous">   
                     </div>
 
                     <div class="next-container navigation">
-                        <img class="nav" src="images\icon-next.svg" alt="icon-next"> 
+                        <img class="nav nextNavigation" src="images\icon-next.svg" alt="icon-next"> 
                     </div>
                     
-                    <img src="images\image-product-1.jpg" alt="image-product-1">
+                    <img class="Feauture-img" src="images\image-product-1.jpg" alt="image-product-1">
                 </div>
                 <!-- smaller images -->
                 <div class="images-container">
-                    <img src="images\image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
-                    <img src="images\image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
-                    <img src="images\image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
-                    <img src="images\image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
+                    <img class="container-img" src="images\image-product-1.jpg" alt="image-product-1-thumbnail">
+                    <img class="container-img" src="images\image-product-2.jpg" alt="image-product-2-thumbnail">
+                    <img class="container-img" src="images\image-product-3.jpg" alt="image-product-3-thumbnail">
+                    <img class="container-img" src="images\image-product-4.jpg" alt="image-product-4-thumbnail">
                 </div>
             </div>
             <!-- content section -->

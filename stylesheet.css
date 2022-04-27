@@ -5,6 +5,7 @@ html{
 body{
     margin:0;
     min-height: 100vh;
+    position: relative;
 }
 
 header{
@@ -17,6 +18,21 @@ header{
     align-items: center;
     position: relative;
 }
+
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
 
 .nav-toggle {
     display: none;
@@ -128,6 +144,10 @@ flex-direction: column;
     align-items: center;
 }
 
+.pre2{
+    left:-20px;  
+}
+
 .next-container{
     position: absolute;
     right: 20px;
@@ -140,6 +160,10 @@ flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.next2{
+  right: -20px;  
 }
  .nav{
 width: 100%;
@@ -183,6 +207,7 @@ width: 100%;
 .images-container img{
     width: 22%;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /* <!-- content section --> */

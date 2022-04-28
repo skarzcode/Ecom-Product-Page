@@ -157,9 +157,6 @@ closeModal.addEventListener("click", function(){
  
 
 
-
-
-
   
  
       

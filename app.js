@@ -1,7 +1,13 @@
 const featuredImage = document.querySelector(".Feauture-img");
+const modalFeaturedImage = document.querySelector(".Feauture-img2");
 const containerImage = document.querySelectorAll(".container-img");
+const modalContainerImage = document.querySelectorAll(".container-img2");
+const modal = document.querySelector(".modal");
+const closeModal = document.querySelector(".close-modal");
 const prevNav = document.querySelector(".preNavigation");
+const modalPrevNav = document.querySelector(".preNavigation2");
 const nextNav = document.querySelector(".nextNavigation");
+const modalNextNav = document.querySelector(".nextNavigation2");
 const cartIcon = document.querySelector(".cart-icon");
 const cart = document.querySelector(".cart");
 const plus = document.querySelector(".add");
@@ -24,6 +30,7 @@ const imgArr = ["images/image-product-1.jpg", "images/image-product-2.jpg", "ima
 // eventlistener on the row of small images under the featured image so when user clicks any of them the featured image gets populated with the src
 containerImage.forEach((img) => img.addEventListener("click", function(){
   featuredImage.src = img.src;
+  modalFeaturedImage.src = featuredImage.src;
 }));
 
 // eventlistener to increase counter which is used as an index for the imgArray to then retrive the src and populate the featured image
@@ -35,6 +42,15 @@ prevNav.addEventListener("click", function(){
   count--;
   featuredImage.src = imgArr[count];
 })
+
+modalPrevNav.addEventListener("click", function(){
+    if(count <= 0){
+        count = 4;
+    }
+    count--;
+    modalFeaturedImage.src = imgArr[count];
+  })
+
 // eventlistener to decrease counter which is used as an index for the imgArray to then retrive the src and populate the featured image
 nextNav.addEventListener("click", function(){
   count++
@@ -43,6 +59,14 @@ nextNav.addEventListener("click", function(){
 }
 featuredImage.src = imgArr[count];
 })
+
+modalNextNav.addEventListener("click", function(){
+    count++
+    if(count >= 4){
+      count = 0;
+  }
+  modalFeaturedImage.src = imgArr[count];
+  })
 
 
 
@@ -117,6 +141,18 @@ if(currentCount > 0){
     cartCount.classList.remove("flex");
 }
 
+
+featuredImage.addEventListener("click", function(){
+    if (window.matchMedia("(min-width: 500px)").matches){
+        modal.classList.add("flex"); 
+    } else {
+        modal.classList.remove("flex");
+    }
+})
+
+closeModal.addEventListener("click", function(){
+    modal.classList.remove("flex");
+})
 
  
 

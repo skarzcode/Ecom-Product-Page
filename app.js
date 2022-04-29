@@ -27,6 +27,7 @@ const imgArr = ["images/image-product-1.jpg", "images/image-product-2.jpg", "ima
 
 
 
+
 // eventlistener on the row of small images under the featured image so when user clicks any of them the featured image gets populated with the src
 containerImage.forEach((img) => img.addEventListener("click", function(){
   featuredImage.src = img.src;
@@ -163,6 +164,13 @@ closeModal.addEventListener("click", function(){
 
   cartFunctionality(plus,minus,addToCart,bin);
 
+//   window.addEventListener("resize", function() {
+//     if (window.matchMedia("(min-width: 500px)").matches) {
+//       console.log("Screen width is at least 500px")
+//     } else {
+//       console.log("Screen less than 500px")
+//     }
+//   })
 
   
 
